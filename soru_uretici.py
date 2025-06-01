@@ -1,6 +1,7 @@
 from docx import Document
 import random
 from transformers import pipeline
+import streamlit as st
 
 @st.cache_data   #.docx dosyasını ön belleğe alır,programı hızlandırır
 def get_topic_text(doc_path, topic_no):
