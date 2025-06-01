@@ -2,6 +2,7 @@ from docx import Document
 import random
 from transformers import pipeline
 
+@st.cache_data   #.docx dosyasını ön belleğe alır,programı hızlandırır
 def get_topic_text(doc_path, topic_no):
     doc = Document(doc_path)
     paragraphs = [p.text.strip() for p in doc.paragraphs if p.text.strip()]
